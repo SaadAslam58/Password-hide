@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Hide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="input-box">
+        <input type="password" placeholder="password" id="password">
+        <img src="img/eye-close.png" alt="eye-close" id="eyeicon">
+    </div>
+    <script>
+        let eyeicon = document.querySelector('#eyeicon');
+let pass = document.querySelector('#password');
+
+eyeicon.addEventListener('click', function() {
+    if (pass.type === 'password'){
+        pass.type = 'text';
+        eyeicon.src = 'img/eye-open.png';
+    }else {
+        eyeicon.src = 'img/eye-close.png';
+        pass.type = 'password';
+    }
+})
+    </script>
+</body>
+</html>
